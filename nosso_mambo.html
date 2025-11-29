@@ -1,0 +1,119 @@
+import React from "react";
+
+export default function NossoMamboSite() {
+  return (
+    <div className="bg-black text-white min-h-screen font-sans">
+      {/* HEADER */}
+      <header className="flex items-center justify-between p-6 bg-black shadow-lg">
+        <div className="flex items-center gap-4">
+          <img src="meu%20logo.png" alt="Nosso Mambo Logo" className="h-16" />
+          <h1 className="text-3xl font-bold text-yellow-500">Nosso Mambo</h1>
+        </div>
+
+        <nav className="hidden md:flex gap-6 text-yellow-500 font-bold">
+          <a href="#home" className="hover:text-red-500 transition">Início</a>
+          <a href="#servicos" className="hover:text-red-500 transition">Serviços</a>
+          <a href="#sobre" className="hover:text-red-500 transition">Sobre Nós</a>
+          <a href="#contactos" className="hover:text-red-500 transition">Contactos</a>
+        </nav>
+
+        <a
+          href="https://wa.me/244935894850"
+          className="bg-green-600 px-4 py-2 rounded-xl font-bold hover:bg-green-700 transition"
+        >
+          WhatsApp
+        </a>
+      </header>
+
+      {/* HERO */}
+      <section
+        id="home"
+        className="flex flex-col items-center justify-center text-center py-32 bg-cover bg-center"
+        style={{ backgroundImage: "url('meu%20logo.png')" }}
+      >
+        <h2 className="text-5xl font-bold text-yellow-500 drop-shadow-lg">Gráfica & Cyber</h2>
+        <p className="mt-4 text-xl text-gray-300 max-w-2xl">
+          Criatividade, Impressão e Tecnologia ao seu serviço.
+        </p>
+        <a
+          href="#servicos"
+          className="mt-8 bg-red-600 px-6 py-3 rounded-full text-xl font-bold hover:bg-red-700 transition"
+        >
+          Ver Serviços
+        </a>
+      </section>
+
+      {/* SERVIÇOS */}
+      <section id="servicos" className="py-20 px-6 max-w-6xl mx-auto">
+        <h2 className="text-4xl font-bold text-yellow-500 text-center mb-12">Serviços</h2>
+        <div className="grid md:grid-cols-3 gap-10">
+          {[
+            "Impressões & Cópias",
+            "Design Gráfico",
+            "Criação de Logotipos",
+            "Serviços de Cyber / Internet",
+            "Digitalização de Documentos",
+            "Cartões, Flyers, Banners & Muito Mais",
+          ].map((srv, i) => (
+            <div
+              key={i}
+              className="bg-zinc-900 rounded-2xl p-8 shadow-lg border border-zinc-700 hover:border-red-600 transition"
+            >
+              <h3 className="text-2xl font-bold text-red-500 mb-3">{srv}</h3>
+              <p className="text-gray-300 text-sm">Serviço profissional e rápido, com qualidade garantida.</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* SOBRE */}
+      <section id="sobre" className="py-20 px-6 max-w-5xl mx-auto text-center">
+        <h2 className="text-4xl font-bold text-yellow-500 mb-6">Sobre Nós</h2>
+        <p className="text-gray-300 text-lg leading-relaxed">
+          A <span className="text-red-500 font-bold">Nosso Mambo</span> é uma gráfica e cyber dedicada a oferecer
+          serviços de qualidade, rapidez e criatividade. Transformamos ideias em realidade e ajudamos o seu negócio a
+          crescer com soluções visuais modernas e profissionais.
+        </p>
+      </section>
+
+      {/* CONTACTOS */}
+      <section id="contactos" className="py-20 px-6 max-w-6xl mx-auto text-center">
+        <h2 className="text-4xl font-bold text-yellow-500 mb-6">Contactos</h2>
+
+        <p className="text-xl text-gray-300"><strong>WhatsApp:</strong> +244 935 894 850</p>
+        <p className="text-xl text-gray-300 mt-2"><strong>Telemóveis:</strong> +244 925 667 883 | +244 933 336 180</p>
+        <p className="text-xl text-gray-300 mt-2"><strong>Endereço:</strong> Angola - Luanda / Viana</p>
+
+        <div className="flex flex-col items-center md:flex-row md:justify-center gap-4 mt-6">
+          <a
+            href="https://wa.me/244935894850"
+            className="inline-block bg-green-600 px-6 py-3 rounded-full text-xl font-bold hover:bg-green-700 transition"
+          >
+            Falar no WhatsApp
+          </a>
+
+          <a
+            href="https://maps.google.com/?q=Luanda+Viana+Angola"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-blue-600 px-6 py-3 rounded-full text-xl font-bold hover:bg-blue-700 transition"
+          >
+            Abrir no Google Maps
+          </a>
+        </div>
+
+        <iframe
+          className="w-full h-80 rounded-2xl mt-10 border border-zinc-700"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.171138152438!2d13.240!3d-8.912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f5237e7bcb29%3A0x0000000000000000!2sViana%2C%20Luanda%2C%20Angola!5e0!3m2!1spt-PT!2sao!4v00000000000"
+          allowFullScreen={true}
+          loading="lazy"
+        ></iframe>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="py-6 text-center text-gray-500 bg-black border-t border-zinc-800">
+        © 2025 Nosso Mambo - Criações Gráfica
+      </footer>
+    </div>
+  );
+}
